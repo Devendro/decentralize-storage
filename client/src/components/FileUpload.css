@@ -1,0 +1,51 @@
+.top {
+  margin: 40px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.choose {
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 10px 15px; /* Increased padding for better touch targets */
+  margin-right: 10px;
+  background-color: #007bff; /* Added a background color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.choose:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+  background-color: #0056b3; /* Darker background on hover */
+}
+
+.upload {
+  border: none; /* Remove default border */
+  background-color: #13aa52; /* Primary color */
+  color: #ffffff;
+  padding: 10px 15px; /* Increased padding for better touch targets */
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+
+.upload:hover {
+  background-color: #a5efc1; /* Lighter background on hover */
+  color: #ffffff; /* Maintain text color */
+}
+
+.upload:disabled,
+.upload[disabled] {
+  border: 1px solid #999999; /* Add border for disabled state */
+  background-color: #cccccc; /* Disabled background color */
+  color: #666666; /* Disabled text color */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+div {
+  padding: 5px 10px;
+}

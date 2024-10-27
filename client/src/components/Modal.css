@@ -1,0 +1,157 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal appears on top */
+}
+
+.modalContainer {
+  width: 500px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: relative; /* Added for positioning close button */
+}
+
+.title {
+  font-size: 1.5rem; /* Increased font size */
+  margin-bottom: 15px; /* Space between title and body */
+  font-weight: bold; /* Bold title for emphasis */
+  text-align: center; /* Center text */
+}
+
+.titleCloseBtn {
+  position: absolute; /* Position close button */
+  top: 10px;
+  right: 10px;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem; /* Increased font size */
+  cursor: pointer;
+  color: #888; /* Color for the close button */
+}
+
+.titleCloseBtn button:hover {
+  color: #ff4081; /* Change color on hover */
+}
+
+.modalContainer .body {
+  flex: 1; /* Take available space */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  font-size: 1.2rem; /* Reduced font size */
+  text-align: center;
+}
+
+.modalContainer .body input {
+  width: 100%; /* Full width input */
+  height: 40px; /* Increased height */
+  padding: 10px; /* Padding for input */
+  border: 1px solid #ccc; /* Border for input */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 15px; /* Space between input and select */
+}
+
+.modalContainer .footer {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  margin-top: 20px; /* Space above buttons */
+}
+
+.modalContainer .footer button {
+  width: 48%; /* Set buttons to take half of the footer */
+  height: 40px; /* Consistent height */
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 5px; /* Consistent rounding */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modalContainer .footer button:hover {
+  background-color: #1e88e5; /* Darker shade on hover */
+}
+
+#cancelBtn {
+  background-color: crimson; /* Red for cancel button */
+}
+
+#cancelBtn:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+.address-share {
+  display: block;
+  height: 30px;
+  width: 100%; /* Full width input */
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  background-color: lightblue; /* Focus effect for input */
+  border-color: cornflowerblue; /* Border color change on focus */
+}
+
+/* Dropdown Container */
+.modalContainer .body form {
+  width: 100%; /* Full width of the form */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items */
+}
+
+/* Dropdown Styling */
+.modalContainer .body select {
+  width: 100%; /* Full width */
+  height: 40px; /* Consistent height */
+  padding: 10px; /* Padding for dropdown */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: white; /* White background */
+  font-size: 1rem; /* Font size */
+  color: #333; /* Dark text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+/* Dropdown Hover and Focus States */
+.modalContainer .body select:hover {
+  border-color: cornflowerblue; /* Change border color on hover */
+}
+
+.modalContainer .body select:focus {
+  outline: none; /* Remove default outline */
+  border-color: cornflowerblue; /* Change border color on focus */
+  background-color: lightblue; /* Light blue background on focus */
+}
+
+/* Dropdown Options */
+.modalContainer .body select option {
+  padding: 10px; /* Padding for options */
+  background-color: white; /* Background color */
+  color: #333; /* Text color */
+}
+
+/* Customize Dropdown Arrow (optional) */
+.modalContainer .body select {
+  -webkit-appearance: none; /* Remove default styling */
+  -moz-appearance: none; /* Remove default styling */
+  appearance: none; /* Remove default styling */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path fill="cornflowerblue" d="M4.5 6l3.5 3.5L11.5 6z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat; /* No repeat */
+  background-position: right 10px center; /* Position of arrow */
+  background-size: 12px; /* Size of arrow */
+}
